@@ -9,6 +9,9 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { DeputadoPageModule} from '../pages/deputado/deputado.module';
+import { ItemDeputadoPageModule} from '../pages/item-deputado/item-deputado.module';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -18,6 +21,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    DeputadoPageModule,
+    ItemDeputadoPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
