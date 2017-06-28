@@ -1,0 +1,32 @@
+<!--
+  Generated template for the EstadosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Lista de Estados</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <h2>Acre</h2>
+      <a item-end (click)="itemTapped($event, item)">View </a>
+    </ion-item>
+
+    <ion-item>
+      <h2>Distrito Federal</h2>
+      <a item-end (click)="itemTapped($event, item)">View </a>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

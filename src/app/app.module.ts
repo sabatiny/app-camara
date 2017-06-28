@@ -11,6 +11,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { DeputadoPageModule} from '../pages/deputado/deputado.module';
 import { ItemDeputadoPageModule} from '../pages/item-deputado/item-deputado.module';
+import { EstadosPageModule } from '../pages/estados/estados.module';
+import { ResumoProjetoPageModule } from '../pages/resumo-projeto/resumo-projeto.module';
+import { SetorPageModule } from '../pages/setor/setor.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { ItemDeputadoPageModule} from '../pages/item-deputado/item-deputado.modu
     BrowserModule,
     IonicModule.forRoot(MyApp),
     DeputadoPageModule,
-    ItemDeputadoPageModule
+    ItemDeputadoPageModule,
+    EstadosPageModule,
+    ResumoProjetoPageModule,
+    SetorPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

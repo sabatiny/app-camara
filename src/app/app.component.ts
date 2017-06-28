@@ -7,6 +7,9 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { DeputadoPage } from '../pages/deputado/deputado';
 import { ItemDeputadoPage } from '../pages/item-deputado/item-deputado';
+import { EstadosPage } from '../pages/estados/estados';
+import { ResumoProjetoPage } from '../pages/resumo-projeto/resumo-projeto';
+import { SetorPage } from '../pages/setor/setor';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,8 +27,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Deputados', component: DeputadoPage },
-      { title: 'Assuntos', component: ListPage },
-      { title: 'Estados', component: ListPage },
+      { title: 'Assuntos', component: SetorPage },
+      { title: 'Estados', component: EstadosPage },
       { title: 'Todos os PLs', component: ListPage }
     ];
 

@@ -1,0 +1,43 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Areas de Interesse</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      Saúde
+      <a item-end (click)="itemTapped($event, item)">View </a>
+    </ion-item>
+
+    <ion-item>
+      Educação
+      <a item-end (click)="itemTapped($event, item)">View </a>
+    </ion-item>
+
+    <ion-item>
+      Transporte
+      <a item-end (click)="itemTapped($event, item)">View </a>
+    </ion-item>
+
+    <ion-item>
+      Segurança
+      <a item-end (click)="itemTapped($event, item)">View </a>
+    </ion-item>
+
+    <ion-item>
+      Saneamento
+      <a item-end (click)="itemTapped($event, item)">View </a>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
