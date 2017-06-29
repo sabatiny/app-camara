@@ -24,20 +24,12 @@
 
   <ion-list>
 
-    <ion-item (click)="itemTapped($event, item)">
+    <ion-item *ngFor="let deputado of lista_deputados"(click)="itemTapped($event, item)">
       <ion-avatar item-left>
-        <img src="assets/images/avatar-anonimo.png">
+        <img src="{{ deputado.urlFoto }}">
       </ion-avatar>
-      <h2>Fulano de tal</h2>
-      <p>PT</p>
-    </ion-item>
-
-    <ion-item (click)="itemTapped($event, item)">
-      <ion-avatar item-left>
-        <img src="assets/images/avatar-anonimo.png">
-      </ion-avatar>
-      <h2>Beltrano Cicrano</h2>
-      <p>PSDB</p>
+      <h2>{{ deputado.nome }}</h2>
+      <p>{{ deputado.siglaPartido}}</p>
     </ion-item>
 
   </ion-list>

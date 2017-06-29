@@ -13,11 +13,11 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding *ngFor=" let deputado of lista_deputados">
   <ion-avatar>
     <img src="assets/images/avatar-anonimo.png">
   </ion-avatar>
-  <h2 class="nome">Fulano de tal</h2>
+  <h2 class="nome">{{ deputado.nome }}</h2>
   <p>Assiduidade</p>
   <p>Projetos propostos</p>
   <p>Areas de Interesse</p>

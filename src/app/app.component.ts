@@ -10,6 +10,7 @@ import { ItemDeputadoPage } from '../pages/item-deputado/item-deputado';
 import { EstadosPage } from '../pages/estados/estados';
 import { ResumoProjetoPage } from '../pages/resumo-projeto/resumo-projeto';
 import { SetorPage } from '../pages/setor/setor';
+import { ProjetoPage } from '../pages/projeto/projeto';
 
 @Component({
   templateUrl: 'app.html'
@@ -29,7 +30,7 @@ export class MyApp {
       { title: 'Deputados', component: DeputadoPage },
       { title: 'Assuntos', component: SetorPage },
       { title: 'Estados', component: EstadosPage },
-      { title: 'Todos os PLs', component: ListPage }
+      { title: 'Todos os PLs', component: ProjetoPage }
     ];
 
   }

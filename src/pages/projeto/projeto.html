@@ -1,0 +1,46 @@
+<!--
+  Generated template for the ProjetoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Todas PL's</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let projeto of lista_projetos">
+    <ion-card-content>
+      <ion-card-header>{{ projeto.numero }}</ion-card-header>
+      <p><strong>Autor</strong>{{ projeto.autor }}</p>
+      <p><strong>Data:</strong> {{ projeto.dataApresentacaoInicio }}</p>
+      <p><strong>Area de interesse:</strong> Saúde</p>
+      <p><strong>Status:</strong> Em andamento</p>
+      <a >Veja aqui o texto da PL</a>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-header>PL número tal</ion-card-header>
+      <p>
+        <strong>Autor</strong>
+        : Fulano de tal
+      </p>
+      <p><strong>Data:</strong> 25/06/2015</p>
+      <p><strong>Area de interesse:</strong> Saúde</p>
+      <p><strong>Status:</strong> Em andamento</p>
+      <a >Veja aqui o texto da PL</a>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
