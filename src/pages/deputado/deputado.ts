@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,LoadingController } from 'ionic-angular';
 
 import { ItemDeputadoPage } from '../../pages/item-deputado/item-deputado';
 import { DeputadoProvider} from '../../providers/deputado/deputado'
@@ -24,27 +24,32 @@ export class DeputadoPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private deputadoProvider: DeputadoProvider
-    ) {
+    public loadingCtrl: LoadingController,
+    private deputadoProvider: DeputadoProvider) {
   }
 
   ionViewDidLoad() {
+    let loader = this.loadingCtrl.create({
+      content: "Aguarde um momento..."
+    });
+    loader.present();
     this.deputadoProvider.getDeputados().subscribe(
       data=>{
 
         const response = (data as any);
         const objeto_retorno = JSON.parse(response._body);
         console.log(objeto_retorno);
-        this.lista_deputados = objeto_retorno.dados
-      },error=>{
+        this.lista_deputados = objeto_retorno.dados;
+        loader.dismiss();
+    },error=>{
         console.log(error)
       }
     )
-
+  }
+  seleciona(deputado){
+    this.navCtrl.push(ItemDeputadoPage, { deputadoSelecionado: deputado })
   }
 
-  itemTapped($event, item) {
-    this.navCtrl.push(ItemDeputadoPage, item);
-  }
+  
 
 }

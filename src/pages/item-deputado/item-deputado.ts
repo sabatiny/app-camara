@@ -17,27 +17,30 @@ import { DeputadoProvider } from '../../providers/deputado/deputado'
 })
 export class ItemDeputadoPage {
 
-  public lista_deputados = new Array<any>();
+  // public lista_deputados = new Array<any>();
+  public deputado;
+
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private deputadoProvider: DeputadoProvider
     ) {
+      this.deputado = navParams.get('deputadoSelecionado');
   }
 
   ionViewDidLoad() {
-    this.deputadoProvider.getDeputados().subscribe(
-      data=>{
+    // this.deputadoProvider.getDeputados().subscribe(
+    //   data=>{
 
-        const response = (data as any);
-        const objeto_retorno = JSON.parse(response._body);
-        console.log(objeto_retorno);
-        this.lista_deputados = objeto_retorno.dados
-      },error=>{
-        console.log(error)
-      }
-    )
+    //     const response = (data as any);
+    //     const objeto_retorno = JSON.parse(response._body);
+    //     console.log(objeto_retorno);
+    //     this.lista_deputados = objeto_retorno.dados
+    //   },error=>{
+    //     console.log(error)
+    //   }
+    // )
 
   }
 

@@ -16,6 +16,7 @@ import { EstadosPageModule } from '../pages/estados/estados.module';
 import { ResumoProjetoPageModule } from '../pages/resumo-projeto/resumo-projeto.module';
 import { SetorPageModule } from '../pages/setor/setor.module';
 import { ProjetoPageModule } from '../pages/projeto/projeto.module';
+import { FiltroPageModule } from "../pages/filtro/filtro.module";
 
 import { ProjetoProvider } from '../providers/projeto/projeto';
 import { DeputadoProvider } from '../providers/deputado/deputado';
@@ -44,12 +45,14 @@ const cloudSettings: CloudSettings = {
     SetorPageModule,
     ProjetoPageModule,
     TabsPageModule,
+    FiltroPageModule,
     HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
+        
     ListPage
   ],
   providers: [

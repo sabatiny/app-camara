@@ -7,15 +7,15 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Fulano de Tal</ion-title>
+    <ion-title>{{ deputado.nome }}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding *ngFor=" let deputado of lista_deputados">
+<ion-content padding>
   <ion-avatar>
-    <img src="assets/images/avatar-anonimo.png">
+    <img src="{{ deputado.urlFoto }}">
   </ion-avatar>
   <h2 class="nome">{{ deputado.nome }}</h2>
   <p>Assiduidade</p>

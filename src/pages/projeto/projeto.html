@@ -11,7 +11,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Todas PL's</ion-title>
-    <ion-icon class="right" name="search" (click)="itemTapped($event)"></ion-icon>
+    <ion-icon class="right top" name="search" (click)="itemTapped($event)"></ion-icon>
   </ion-navbar>
 
 </ion-header>
@@ -51,20 +51,23 @@
     </div>
 
     <ion-row>
+      
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="person-add"></ion-icon>
           <div>Seguir</div>
         </button>
       </ion-col>
+      
       <ion-col>
         <button ion-button icon-left clear small>
           <div>Ver detalhes</div>
         </button>
       </ion-col>
-      <ion-col center text-center >
-        <ion-note class="tempo">
-          25/07/2017
+      
+      <ion-col center text-center class="tempo">
+        <ion-note>
+          11h ago
         </ion-note>
       </ion-col>
       

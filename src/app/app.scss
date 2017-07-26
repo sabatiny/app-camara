@@ -14,3 +14,21 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.backgroundHeader{
+  background-color: #00ffff;
+}
+.titleHeader{
+  color: white;
+}
+.colorBrand{
+  color: #2a98b0 !important;
+  font-weight: 500;
+}
+.heading{
+  font-size: 16px;
+  text-transform: inherit !important;
+}
+.subHeading{
+  font-size: 14px;
+}
+
