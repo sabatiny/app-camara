@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProjetoProvider } from '../../providers/projeto/projeto';
+import { FiltroPage } from "../filtro/filtro";
 
 /**
  * Generated class for the ProjetoPage page.
@@ -50,6 +51,10 @@ export class ProjetoPage {
       }
     )
 
+  }
+
+  itemTapped($event) {
+    this.navCtrl.push(FiltroPage);
   }
 
 }

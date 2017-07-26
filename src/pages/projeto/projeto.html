@@ -11,36 +11,64 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Todas PL's</ion-title>
+    <ion-icon class="right" name="search" (click)="itemTapped($event)"></ion-icon>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngFor="let projeto of lista_projetos">
-    <ion-card-content>
-      <ion-card-header>{{ projeto.numero }}</ion-card-header>
-      <p><strong>Autor</strong>{{ projeto.autor }}</p>
-      <p><strong>Data:</strong> {{ projeto.dataApresentacaoInicio }}</p>
-      <p><strong>Area de interesse:</strong> Saúde</p>
-      <p><strong>Status:</strong> Em andamento</p>
-      <a >Veja aqui o texto da PL</a>
-    </ion-card-content>
+  <!--<ion-card *ngFor="let projeto of lista_projetos">
+    <ion-item>
+      <ion-card-content>
+        <ion-avatar item-left>
+          <img src="../images/avatar-anonimo.png">
+        </ion-avatar>
+        <ion-card-header>{{ projeto.numero }}</ion-card-header>
+        <ion-card-header>{{ projeto.id }}</ion-card-header>
+        <p>{{ projeto.uri }}</p>
+        <p><strong>Autor:</strong>{{ projeto.tipoAutor }}</p>
+        <p><strong>Data:</strong> {{ projeto.dataApresentacaoInicio }}</p>
+        <p><strong>Area de interesse:</strong> Saúde</p>
+        <p><strong>Status:</strong> Em andamento</p>
+        <a >Veja aqui o texto da PL</a>
+      </ion-card-content>
+    </ion-item>
 
-  </ion-card>
+  </ion-card>-->
 
   <ion-card>
-    <ion-card-content>
-      <ion-card-header>PL número tal</ion-card-header>
-      <p>
-        <strong>Autor</strong>
-        : Fulano de tal
-      </p>
-      <p><strong>Data:</strong> 25/06/2015</p>
-      <p><strong>Area de interesse:</strong> Saúde</p>
-      <p><strong>Status:</strong> Em andamento</p>
-      <a >Veja aqui o texto da PL</a>
-    </ion-card-content>
+    <ion-item>
+      <ion-avatar item-left>
+          <img src="assets/images/avatar-anonimo.png">
+      </ion-avatar>
+      <p class="heading colorBrand">Josi Nunes / PMBD</p>
+      <p class="subHeading colorBrand">PL 8104/2017</p>
+      <p class="situacaoProposicao">Aguardando Despacho do Presidente da Câmara dos Deputados</p>
+    </ion-item>
 
+    <div class="resumoProjeto">
+      <p class="textoResumo">Altera a Lei nº 9.503, de 23 de setembro de 1997, que institui o Código de Trânsito Brasileiro e o inciso IX do art. 3º da Lei nº 10.883, de 16 de junho de 2004, que dispõe sobre a Carreira de Fiscal Federal Agropecuário, para dispor sobre a identificação dos veículos de fiscalização agropecuária por dispositivos de alarme sonoro e iluminação vermelha intermitente.</p>
+    </div>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="person-add"></ion-icon>
+          <div>Seguir</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <div>Ver detalhes</div>
+        </button>
+      </ion-col>
+      <ion-col center text-center >
+        <ion-note class="tempo">
+          25/07/2017
+        </ion-note>
+      </ion-col>
+      
+    </ion-row>
+    
   </ion-card>
 
-</ion-content>

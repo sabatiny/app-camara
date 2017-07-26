@@ -17,11 +17,11 @@ export class ProjetoProvider {
   }
 
   getProjetos(){
-    return this.http.get(this.baseApiPath + "/proposicoes?ano=2017");
+    return this.http.get(this.baseApiPath + "/proposicoes");
+
   }
 
   getProjetosReferencia(){
-
     return this.http.get(this.baseApiPath + "/referencias/tiposProposicao");
 
   }

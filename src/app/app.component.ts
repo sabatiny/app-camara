@@ -11,6 +11,7 @@ import { EstadosPage } from '../pages/estados/estados';
 import { ResumoProjetoPage } from '../pages/resumo-projeto/resumo-projeto';
 import { SetorPage } from '../pages/setor/setor';
 import { ProjetoPage } from '../pages/projeto/projeto';
+import { TabsPage } from "../pages/tabs/tabs";
 
 @Component({
   templateUrl: 'app.html'
@@ -18,7 +19,7 @@ import { ProjetoPage } from '../pages/projeto/projeto';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = TabsPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -27,10 +28,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
+      { title: 'Início', component: HomePage },
       { title: 'Deputados', component: DeputadoPage },
-      { title: 'Assuntos', component: SetorPage },
-      { title: 'Estados', component: EstadosPage },
       { title: 'Todos os PLs', component: ProjetoPage }
+
     ];
 
   }
