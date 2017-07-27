@@ -6,19 +6,26 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>{{ deputado.nome }}</ion-title>
+  <ion-navbar color="colorBrand">
+    <ion-title>Informações</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <ion-avatar>
-    <img src="{{ deputado.urlFoto }}">
-  </ion-avatar>
-  <h2 class="nome">{{ deputado.nome }}</h2>
-  <p>Assiduidade</p>
-  <p>Projetos propostos</p>
-  <p>Areas de Interesse</p>
+  <div class="infoDeputado">
+    <div class="fotoDeputado">
+      <img src="{{ deputado.urlFoto }}">
+    </div>
+    <div class="nomeDeputado">{{ deputado.nome }}</div>
+    <div class="botaoSeguir">
+      <ion-icon name="person-add"></ion-icon>
+      <div class="textoSeguir">Seguir</div>
+    </div>
+
+    <p>Assiduidade</p>
+    <p>Projetos propostos</p>
+    <p>Areas de Interesse</p>
+  </div>
 </ion-content>
