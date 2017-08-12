@@ -1,37 +1,31 @@
-<!--
-  Generated template for the ResumoProjetoPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Projetos</ion-title>
+  <ion-navbar color="colorBrand">
+    <ion-title>Informações da PL</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  <ion-card>
-    <ion-card-content>
-      <h2 class="projeto-titulo">Projeto tal</h2>
-      <div class="autor-projeto">Autor: Fulano de tal </div>
-      <p class="descricao-projeto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed </p>
+<ion-content padding >
+  <p class="heading" text-center>PL {{ projeto.id }}/{{ projeto.ano }} </p>
+  <div class="botaoSeguir">
+    <button ion-button outline icon-left>
+      <ion-icon name="person-add"></ion-icon>
+      Seguir
+    </button>
+  </div>
 
-      <div class="partido-do-autor right">PT</div>
-    </ion-card-content>
-  </ion-card>
+  <div class="mostrarInfo">
+    <p>Informações gerais</p>
+    <h5><strong>Autor:</strong>Hildo Rocha</h5> 
+    <h5><strong>Partido/UF:</strong>PMDB/MA</h5> 
+    <h5><strong>Apresentação:</strong>17/07/2017</h5> 
+    <h5><strong>Situação:</strong>Aguardando Despacho do Presidente da Câmara dos Deputados </h5> 
+  </div>
 
-  <ion-card>
-    <ion-card-content>
-      <h2 class="projeto-titulo">Projeto tal</h2>
-      <div class="autor-projeto">Autor: Fulano de tal </div>
-      <p class="descricao-projeto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed </p>
-
-      <div class="partido-do-autor item-end">PT</div>
-    </ion-card-content>
-  </ion-card>
-
+  <div class="mostrarInfo">
+    <p>Ementa</p>
+    <h5>{{ projeto.ementa }}</h5>
+  </div>
 </ion-content>

@@ -3,18 +3,34 @@ page-projeto {
     font-size: 11px;
     color: #9a9a9a;
   }
-  .resumoProjeto{
-    background-color: #f6f6f6;
-    padding: 1em;
+  
+  
+  .button-clear-md{
+    font-size: 12px !important;
+    padding: 0.2em;
   }
-  .textoResumo{
-    color: #555555;
-  }
-  .tempo{
-    margin-top: 10px;
-    display: block;
-  }
+  
   .col{
-    padding: 0 !important;
+    padding: 5px 0 !important;
+    font-size: 12px !important;
+  }
+  .filtro{
+    position: relative;
+
+  }
+  .iconFunnel{
+    position: absolute;
+    right: 0;
+    top: 2px;
+  }
+
+  .tagFiltro{
+    background-color: #f99f3b;
+    border-radius: 4px;
+    padding: 4px 5px;
+    font-size: 13px;
+    color: white;
+    margin: 2px 0;
+    display: inline-block;
   }
 }

@@ -6,12 +6,16 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="colorBrand">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Todas PL's</ion-title>
-    <ion-icon class="right top" name="search" (click)="itemTapped($event)"></ion-icon>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -36,30 +40,45 @@
 
   </ion-card>-->
 
-  <ion-card>
+  <div class="filtro">
+    <div class="tagFiltro">
+      Adicionadas recentemente
+    </div>
+
+    <div class="tagFiltro">
+      Em votação
+    </div>
+
+    <div class="tagFiltro">
+      Em votação
+    </div>
+    <ion-icon name="funnel" class="iconFunnel" (click)="itemTapped($event)"></ion-icon>
+  </div>
+  
+  
+  <ion-card *ngFor="let projeto of lista_projetos">
     <ion-item>
       <ion-avatar item-left>
           <img src="assets/images/avatar-anonimo.png">
       </ion-avatar>
-      <p class="heading colorBrand">Josi Nunes / PMBD</p>
-      <p class="subHeading colorBrand">PL 8104/2017</p>
+      <p class="heading colorBrand textoForte">{{ projeto.id }} / PMBD</p>
+      <p class="subHeading colorBrand textoForte">PL {{ projeto.id}}/{{ projeto.ano }}</p>
       <p class="situacaoProposicao">Aguardando Despacho do Presidente da Câmara dos Deputados</p>
     </ion-item>
 
     <div class="resumoProjeto">
-      <p class="textoResumo">Altera a Lei nº 9.503, de 23 de setembro de 1997, que institui o Código de Trânsito Brasileiro e o inciso IX do art. 3º da Lei nº 10.883, de 16 de junho de 2004, que dispõe sobre a Carreira de Fiscal Federal Agropecuário, para dispor sobre a identificação dos veículos de fiscalização agropecuária por dispositivos de alarme sonoro e iluminação vermelha intermitente.</p>
+      <p class="textoResumo">{{ projeto.ementa }}</p>
     </div>
 
     <ion-row>
-      
-      <ion-col>
+      <ion-col text-center>
         <button ion-button icon-left clear small>
           <ion-icon name="person-add"></ion-icon>
           <div>Seguir</div>
         </button>
       </ion-col>
       
-      <ion-col>
+      <ion-col (click)="seleciona(projeto)">
         <button ion-button icon-left clear small>
           <div>Ver detalhes</div>
         </button>

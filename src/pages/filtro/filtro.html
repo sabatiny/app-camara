@@ -6,25 +6,25 @@
 -->
 <ion-header class="backgroundHeader">
 
-  <ion-navbar>
+  <ion-navbar color="colorBrand">
     <ion-title class="titleHeader">Filtrar Proposições</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
   <ion-list>
     <ion-item>
       <ion-label>Partido</ion-label>
-      <ion-select [(ngModel)]="partido">
+      <ion-select [(ngModel)]="partido" interface="action-sheet">
         <ion-option *ngFor="let deputado of lista_deputados" [value]="deputado.siglaPartido">{{ deputado.siglaPartido }}</ion-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label>Deputado</ion-label>
-      <ion-select [(ngModel)]="deputado">
+      <ion-select [(ngModel)]="deputado" interface="action-sheet">
         <ion-option *ngFor="let deputado of lista_deputados" [value]="deputado.nome">{{ deputado.none }}</ion-option>
       </ion-select>
     </ion-item>
@@ -36,26 +36,26 @@
 
     <ion-item>
       <ion-label>Ano</ion-label>
-      <ion-datetime displayFormat="YYYY" [(ngModel)]="myDate"></ion-datetime>
+      <ion-datetime displayFormat="YYYY" [(ngModel)]="anoProposicao" interface="action-sheet"></ion-datetime>
     </ion-item> 
 
     <ion-item>
       <ion-label>Tipo</ion-label>
-      <ion-select [(ngModel)]="Deputado">
+      <ion-select [(ngModel)]="tipoProposicao">
         <ion-option *ngFor="let deputado of lista_deputados" [value]="deputado.nome">{{ deputado.none }}</ion-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label>Situação</ion-label>
-      <ion-select [(ngModel)]="Deputado">
+      <ion-select [(ngModel)]="situacaoProposicao" interface="action-sheet">
         <ion-option *ngFor="let deputado of lista_deputados" [value]="deputado.nome">{{ deputado.none }}</ion-option>
       </ion-select>
     </ion-item>
   </ion-list>
+  
+  <button ion-button full color="colorBotao">Aplicar Filtro</button>
 
-  <div padding>
-    <button ion-button full>Aplicar Filtro</button>
-  </div>
+  
 
 </ion-content>

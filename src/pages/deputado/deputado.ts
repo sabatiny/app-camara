@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,LoadingController } from 'ionic-angular';
 
 import { ItemDeputadoPage } from '../../pages/item-deputado/item-deputado';
-import { DeputadoProvider} from '../../providers/deputado/deputado'
+import { DeputadoProvider } from '../../providers/deputado/deputado'
 /**
  * Generated class for the DeputadoPage page.
  *

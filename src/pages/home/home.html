@@ -1,18 +1,39 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="colorBrand">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Nome do App</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Aqui fica uma apresentação bem bonita !!</h3>
+  <ion-card>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/images/avatar-anonimo.png">
+      </ion-avatar>
+      <p class="heading colorBrand textoForte">Fulano de Tal</p>
+    </ion-item>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <div class="resumoProjeto">
+      <p class="textoResumo">Altera a Lei nº 9.503, de 23 de setembro de 1997, que institui o Código de Trânsito Brasileiro e o inciso IX do art. 3º da Lei nº 10.883, de 16 de junho de 2004, que dispõe sobre a Carreira de Fiscal Federal Agropecuário, para dispor sobre a identificação dos veículos de fiscalização agropecuária por dispositivos de alarme sonoro e iluminação vermelha intermitente.</p>
+    </div>
+    
+    <ion-col class="tempo">
+      <ion-note>
+        11h ago
+      </ion-note>
+    </ion-col>     
+  
+  </ion-card>
+  
+  <ion-card>
+    <ion-item>
+      <p class="textoResumo">A PL 1234 mudou o status para Vetado totalmente</p>
+    </ion-item>
+  </ion-card>
+
+  
 </ion-content>
